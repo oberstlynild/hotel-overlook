@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Overlook :: Profil</title>
+        <script src="https://kit.fontawesome.com/727fcb130f.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+<body onload="drawName(), fetchReservations()">
+
+
+<div class="navigation-faker"></div>
+<nav>
+    <div class="navigation">
+        <div class="navigation-image">
+            <img src="images/hotel-overlook-logo.png" alt="Hotel Overlook Logo">
+        </div>
+        <div class="navigation-links">
+            <a href="index.html">Forside</a>
+            <a href="hoteller.html">Hoteller og destinationer</a>
+            <a href="vaerelser.html">Værelser</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="login.html" class="nav-login">Login</a>
+        </div>
+    </div>
+</nav>
+
+<div class="seperator-image">
+    <img src="images/teletower-berlin.jpg" alt="The teletower in Berlin">
+</div>
+
+<section class="page-grid-wrapper">
+    <div class="page-grid-left">
+        <div class="page-grid-breadcrump">
+            <a href="index.html">Hotel Overlook > </a>
+            <a href="profil.html">Profil</a>
+        </div>
+        <h2>Administrer reservation</h2>
+        <p>
+            Her kan du ændre dine reservationer
+        </p>
+        <div class="dashed-seperator"></div>
+        <div id="profil-reservationer">
+
+        </div>
+    </div>
+    <div class="page-grid-right" id="page-grid-right">
+        <h2>Dine oplysninger</h2>
+        <p>Du er logget ind som</p>
+        <p id="logged-in-as"></p>
+        <div class="dashed-seperator"></div>
+        <p id="profil-log-ud" onclick="logUd()">Log ud</p>
+    </div>
+</section>
+
+<footer>
+    <div class>
+        <p>&copy; 2019 Hotel Overlook. Alle rettigheder er forbeholdt.</p>
+    </div>
+    <div class>
+        <p>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/?lang=da"><i class="fab fa-twitter-square"></i></a>
+        </p>
+    </div>
+    <div class>
+        <p>
+            <a href="hoteller.html">Hoteller og destinationer</a>
+            <a href="vaerelser.html">Værelser</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="index.html">Om Overlook</a>
+        </p>
+    </div>
+</footer>
+<script src="js/fetchProfil.js"></script>
+<script src="js/profiler.js"></script>
+</body>
+</html>

@@ -1,0 +1,623 @@
+/*BASICS*/
+$overskrift: #444243;
+$paragraf: #8B8B8B;
+$form-placeholder: #CECECE;
+$knapper: #F30100;
+
+input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #EBEBEB;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: red;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid black;
+}
+
+.fa-check {
+    color: green;
+}
+
+.seperator-image {
+    width: 100%;
+    margin-bottom: 50px;
+    img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.dashed-seperator {
+    height: 1px;
+    background-image: linear-gradient(90deg, $paragraf, $paragraf 50%, transparent 50%, transparent 100%);
+    background-size: 20px 1px;
+    border: none;
+}
+
+/*PAGE-GRID*/
+.page-grid-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 25px;
+    .page-grid-left {
+        border-right: 1px solid grey;
+        padding: 20px;
+        h2 {
+            color: $overskrift;
+            font-weight: normal;
+        }
+        p {
+            color: $paragraf;
+        }
+        .page-grid-breadcrump {
+            a {
+                text-decoration: none;
+                color: $overskrift;
+                font-weight: 400;
+                margin: 0
+            }
+        }
+    }
+    .page-grid-right {
+        padding: 20px;
+        h2 {
+            color: $overskrift;
+            font-weight: normal;
+        }
+        p{
+            color: $paragraf;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .page-grid-wrapper {
+        width: 90%;
+        grid-template-columns: 1fr;
+        .page-grid-left {
+            border: none;
+        }
+    }
+}
+
+/*FORSIDE*/
+.seperator-image{
+    button {
+        height: 40px;
+        width: 40px;
+        border-radius: 25px;
+        border: none;
+        font-size: 15px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .w3-display-left {
+        position: absolute;
+        top: 40%;
+        left: 25px;
+    }
+    .w3-display-right {
+        position: absolute;
+        top: 40%;
+        right: 25px;
+    }
+}
+
+#forside-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+
+    #forside-nyheder {
+        #nyheder-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 25px;
+
+            img {
+                width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                color: $paragraf;
+            }
+        }
+    }
+
+    #forside-dashed-seperator {
+        height: 1px;
+        background-image: linear-gradient(90deg, $paragraf, $paragraf 50%, transparent 50%, transparent 100%);
+        background-size: 20px 1px;
+        border: none;
+    }
+
+    #forside-vaerelser {
+        #vaerelser-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 25px;
+
+            img {
+                width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+                color: $paragraf;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #forside-wrapper {
+        width: 100%;
+        text-align: center;
+        #forside-nyheder {
+            #nyheder-grid {
+                grid-template-columns: 1fr;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+        #forside-vaerelser {
+            #vaerelser-grid {
+                grid-template-columns: 1fr;
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/*HOTELLER*/
+#lande-navigation {
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+    margin-top: -30px;
+    padding-bottom: 5px;
+    box-shadow: 0px 15px 10px -15px #111;   
+    margin-bottom: 20px;
+    ul {
+        li {
+            display: inline;
+            padding-left: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+        }
+        #nav-danmark {
+            font-weight: bold;
+        }
+    }
+}
+
+#hoteller-overskrift {
+    color: $overskrift;
+    font-weight: normal;
+}
+
+#hoteller-description {
+    color: $paragraf;
+    margin-right: 20px;
+}
+
+#hoteller-byer {
+    margin-right: 15px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    .hotel-by-item {
+        cursor: pointer;
+    }
+    img {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+    }
+    h2 {
+        color: $overskrift;
+        font-weight: normal;
+    }
+    p{
+        margin: 0;
+        color: $paragraf;
+    }
+}
+
+#hoteller-vaerelser {
+    h2 {
+        font-weight: normal;
+        color: $overskrift;
+    }
+}
+
+.room-item {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: white;
+    margin: 20px;
+    cursor: pointer;
+
+    .room-item-left {
+        img {
+            padding: 20px;
+            width: 100%;
+        }
+    }
+    .room-item-right {
+        padding: 40px;
+        .room-title {
+            color: $overskrift;
+            font-weight: normal;
+        }
+        .room-size {
+            color: $paragraf;
+        }
+        .room-description {
+            color: $paragraf;
+        }
+        .room-price {
+            float: right;
+        }
+    }
+}
+
+.room-udstyr-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.vaerelse-normal-pris-span, .vaerelse-flex-pris-span {
+    float: right;
+    font-weight: bold;
+    color: black;
+}
+
+#page-grid-right {
+    img {
+        width: 100%;
+    }
+}
+
+.room-pris-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+    .room-wrapper-pris {
+        background-color: $paragraf;
+        color: black;
+        margin-right: 20px;
+        h4, p, h3 {
+            padding: 10px;
+        }
+        button {
+            cursor: pointer;
+            float: right;
+            background-color: red;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            height: 50px;
+            width: 80px;
+            margin: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .room-item {
+        grid-template-columns: 1fr;
+        .room-item-left {
+            img {
+                padding: 0;
+            }
+        }
+    }
+    #hoteller-vaerelser {
+        img {
+            width: 100%;
+        }
+    }
+    .room-udstyr-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*VÆRELSER*/
+#vaerelser-wrapper {
+    margin-top: 50px;
+}
+
+#vaerelser-right-page-grid {
+    img{
+        width: 100px;
+        height: 80px;
+        object-fit: cover;
+    }
+    p {
+        position: relative;
+        bottom: 70px;
+        left: 110px;
+        color: blue;
+    }
+}
+
+.room-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .room-images {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+/*RESERVER*/
+.reserver-obligatory {
+    color: red;
+}
+#reserver-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 25px;
+    form {
+        label {
+            color: $overskrift;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        select, input[type=text], input[type=date], input[type=password],textarea {
+            width: 100%;
+            margin-top: 5px;
+            height: 35px;
+            text-indent: 5px;
+            color: $overskrift;
+            border: 1px solid $paragraf;
+            border-radius: 3px;
+            &::placeholder {
+                color: $paragraf;
+            }
+        }
+        textarea{
+            height: 200px;
+        }
+        input[type=checkbox]{
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
+#reservation-accepter-label {
+    position: relative;
+    bottom: 5px;
+}
+
+#reservation-knapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 5px;
+    button,input {
+        width: 100%;
+        background-color: $knapper;
+        margin-top: 30px;
+        color: white;
+        height: 40px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+}
+
+#reserver-form-room-type {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 5px;
+}
+
+#prisklasse-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.half-half-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+    #reserver-form {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* LOGIN */
+#login-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+
+    h2 {
+        color: $overskrift;
+        font-weight: normal;
+    }
+    #login-breadcrump {
+        a {
+            text-decoration: none;
+            color: $overskrift;
+            font-weight: 400;
+            margin: 0
+        }
+    }
+    #login-overskrift {
+        font-size: 35px;
+        font-weight: 400;
+        color: $overskrift;
+        margin: 0;
+        margin-top: 10px;
+    }
+    #login-underskrift {
+        color: $paragraf;
+        margin: 0;
+        margin-top: 10px;
+    }
+    #login-seperator {
+        margin-top: 20px;
+        height: 1px;
+        background-image: linear-gradient(90deg, $paragraf, $paragraf 50%, transparent 50%, transparent 100%);
+        background-size: 20px 1px;
+        border: none;
+    }
+    #login-form {
+        form {
+            margin-top: 10px;
+            margin-bottom: 50px;
+            label {
+                display: block;
+                margin-top: 10px;
+                font-size: 18px;
+                .login-obligatory {
+                    color: $knapper;
+                }
+            }
+            input[type="text"], input[type="password"] {
+                display: block;
+                margin-top: 5px;
+                width: 50%;
+                height: 35px;
+                text-indent: 5px;
+                color: $overskrift;
+                border: 1px solid $paragraf;
+                border-radius: 3px;
+                &::placeholder {
+                    color: $paragraf;
+                }
+            }
+            input[type="submit"], button{
+                background-color: $knapper;
+                margin-top: 30px;
+                color: white;
+                height: 40px;
+                width: 100px;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #login-wrapper{
+        width: 100%;
+        text-align: center;
+        #login-form {
+            form {
+                input[type="text"], input[type="password"] {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+/*NYHEDER*/
+#nyheder-aktuel-nyhed {
+    width: 1200px;
+    margin: 0 auto;
+    h2 {
+        color: $overskrift;
+        font-weight: normal;
+    }
+    p {
+        color: $paragraf;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #nyheder-aktuel-nyhed {
+        width: 80%;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/*PROFIL*/
+#profil-log-ud {
+    color: red;
+    cursor: pointer;
+}
+
+
+#profil-reservationer {
+    .profil-reservation-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        border-radius: 5px;
+        justify-items: center;
+        padding: 15px;
+        margin: 15px;
+        p {
+            color: black;
+            margin: 0;
+        }
+        .reservation-header {
+            color: $paragraf;
+        }
+        .reservation-delete {
+            color: red;
+            cursor: pointer;
+        }
+    }
+}
+@media screen and (max-width: 1300px) {
+    #profil-reservationer {
+        .profil-reservation-item {
+            grid-template-columns: 1fr;
+            justify-items: left;
+            .reservation-header {
+                padding-top: 5px;
+            }
+        }
+    }
+}

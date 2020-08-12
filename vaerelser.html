@@ -1,0 +1,97 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Overlook :: Værelser</title>
+        <script src="https://kit.fontawesome.com/727fcb130f.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+<body>
+
+
+<div class="navigation-faker"></div>
+<nav>
+    <div class="navigation">
+        <div class="navigation-image">
+            <img src="images/hotel-overlook-logo.png" alt="Hotel Overlook Logo">
+        </div>
+        <div class="navigation-links">
+            <a href="index.html">Forside</a>
+            <a href="hoteller.html">Hoteller og destinationer</a>
+            <a href="vaerelser.html">Værelser</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="login.html" class="nav-login">Login</a>
+        </div>
+    </div>
+</nav>
+
+<div class="seperator-image">
+    <img src="images/overlook-frankfurt-museumsufer.jpg" alt="Overlook Hotel Frankfurt Museumsufer in Frankfurt, Germany">
+</div>
+
+<section class="page-grid-wrapper" id="vaerelser-wrapper">
+    <div class="page-grid-left">
+        <div class="page-grid-breadcrump" id="vaerelser-breadcrump">
+            <a href="index.html">Hotel Overlook ></a>
+            <a href="vaerelser.html"><span id="vaerelse-last-breadcrump">Se vores udvalg af værelser </span></a>
+        </div>
+        <div id="vaerelser-inner-wrapper">
+            <h2>Se vores udvalg af værelser</h2>
+            <p>
+                Hos Overlook handler den gode hoteloplevelse helt enkelt om at give dig en bedre service, en bedre søvn og en bedre start på dagen, så du tager videre med en god fornemmelse og får lyst til at komme tilbage.<br<br>
+
+                Når du træder indenfor på Overlooks hoteller, oplever du det med det samme. Det er her, store øjeblikke deles med venner og familie, og nye relationer opstår. Hvor fremtiden formes, vigtige møder finder sted, og en god middag måske fører til kærlighed. Her sker altid noget.<br<br>
+
+                Med 31 hoteller på 29 destinationer i syv lande har alle vores hoteller deres egen unikke personlighed og atmosfære. Men nogle ting er en selvfølge, når du vælger at bo hos os.<br><br>
+
+                Du vil opleve værelser af god komfort og høj kvalitet når du bor på et af vores hoteller. Vi har nemlig hentet hjælp fra de bedste eksperter på området. Overlook har et tæt sa marbejde med den legendariske hotelkonge, Bjarne Rother, som anses for at være en af verdens mest erfarne indenfor værelsesudlejning omkring Østersøen. Og han har flere gange givet Overlook's hoteller mere end fem stjerner.<br><br>
+
+                Du kan se de forskellige værelsestyper ved at klikke dig rundt i menuen til højre.
+            </p>
+        </div>
+    </div>
+    <div class="page-grid-right" id="vaerelser-right-page-grid">
+        <h2>Værelsestyper</h2>
+        <img onclick="fetchRoom(6)" src="images/room-standard-single-bed.jpg" alt="Single bed room">
+        <p onclick="fetchRoom(6)">Standard Single</p>
+        <img onclick="fetchRoom(7)" src="images/room-standard-bedroom.jpg" alt="Standard bed room">
+        <p onclick="fetchRoom(7)">Standard</p>
+        <img onclick="fetchRoom(1)" src="images/room-economy-bedroom.jpg" alt="Economy bed room">
+        <p onclick="fetchRoom(1)">Economy</p>
+        <img onclick="fetchRoom(2)" src="images/room-superior-bedroom.jpg" alt="Superior bed room">
+        <p onclick="fetchRoom(2)">Superior</p>
+        <img onclick="fetchRoom(3)" src="images/room-superior-plus-bedroom.jpg" alt="Superior plus bed room">
+        <p onclick="fetchRoom(3)">Superior Plus</p>
+        <img onclick="fetchRoom(4)" src="images/room-junior-suite-bedroom.jpg" alt="Junior suite bed room">
+        <p onclick="fetchRoom(4)">Junior Suite</p>
+        <img onclick="fetchRoom(5)"  src="images/room-presidental-suite-livingroom.jpg" alt="Presidential suite room">
+        <p onclick="fetchRoom(5)">Presidential Suite</p>
+    </div>
+</section>
+
+<footer>
+    <div>
+        <p>&copy; 2019 Hotel Overlook. Alle rettigheder er forbeholdt.</p>
+    </div>
+    <div>
+        <p>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/?lang=da"><i class="fab fa-twitter-square"></i></a>
+        </p>
+    </div>
+    <div>
+        <p>
+            <a href="hoteller.html">Hoteller og destinationer</a>
+            <a href="vaerelser.html">Værelser</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="index.html">Om Overlook</a>
+        </p>
+    </div>
+</footer>
+<script src="js/fetchVaerelse.js"></script>
+<script src="js/profiler.js"></script>
+</body>
+</html>

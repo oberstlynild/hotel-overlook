@@ -1,0 +1,81 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Overlook :: Forside</title>
+        <script src="https://kit.fontawesome.com/727fcb130f.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+<body onload="fetchNyheder(), fetchRooms()">
+
+
+<div class="navigation-faker"></div>
+<nav>
+    <div class="navigation">
+        <div class="navigation-image">
+            <img src="images/hotel-overlook-logo.png" alt="Hotel Overlook Logo">
+        </div>
+        <div class="navigation-links">
+            <a href="index.html">Forside</a>
+            <a href="hoteller.html">Hoteller og destinationer</a>
+            <a href="vaerelser.html">Værelser</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="login.html" class="nav-login">Login</a>
+        </div>
+    </div>
+</nav>
+
+<div class="room-navigation">
+    
+</div>
+
+<div class="seperator-image">
+    <img class="seperator-slideshow" src="images/overlook-copenhagen.jpg" alt="Overlook hotel in Copenhagen">
+    <img class="seperator-slideshow" src="images/overlook-victoria.jpg" alt="Overlook Victoria Hotel Lobby">
+    <img class="seperator-slideshow" src="images/overlook-crown.jpg" alt="Overlook Crown Hotel lobby">
+    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<section id="forside-wrapper">
+    <section id="forside-nyheder">
+        <h2>Se vores nyheder</h2>
+        <div id="nyheder-grid">
+        </div>
+    </section>
+    <div id="forside-dashed-seperator"></div>
+    <section id="forside-vaerelser">
+        <h2>Se udvalgte værelser</h2>
+        <div id="vaerelser-grid">
+        </div>
+    </section>
+</section>
+
+<footer>
+    <div>
+        <p>&copy; 2019 Hotel Overlook. Alle rettigheder er forbeholdt.</p>
+    </div>
+    <div>
+        <p>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/?lang=da"><i class="fab fa-twitter-square"></i></a>
+        </p>
+    </div>
+    <div>
+        <p>
+            <a href="hoteller.html">Hoteller og destinationer</a>
+            <a href="vaerelser.html">Værelser</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="index.html">Om Overlook</a>
+        </p>
+    </div>
+</footer>
+
+<script src="js/slideshow.js"></script>
+<script src="js/nyheder.js"></script>
+<script src="js/profiler.js"></script>
+</body>
+</html>

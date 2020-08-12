@@ -1,0 +1,701 @@
+@charset "UTF-8";
+/*BASICS*/
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #EBEBEB;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: red;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 1px solid black;
+}
+
+.fa-check {
+  color: green;
+}
+
+.seperator-image {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.seperator-image img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.dashed-seperator {
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#8B8B8B), color-stop(50%, #8B8B8B), color-stop(50%, transparent), to(transparent));
+  background-image: linear-gradient(90deg, #8B8B8B, #8B8B8B 50%, transparent 50%, transparent 100%);
+  background-size: 20px 1px;
+  border: none;
+}
+
+/*PAGE-GRID*/
+.page-grid-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  grid-gap: 25px;
+}
+
+.page-grid-wrapper .page-grid-left {
+  border-right: 1px solid grey;
+  padding: 20px;
+}
+
+.page-grid-wrapper .page-grid-left h2 {
+  color: #444243;
+  font-weight: normal;
+}
+
+.page-grid-wrapper .page-grid-left p {
+  color: #8B8B8B;
+}
+
+.page-grid-wrapper .page-grid-left .page-grid-breadcrump a {
+  text-decoration: none;
+  color: #444243;
+  font-weight: 400;
+  margin: 0;
+}
+
+.page-grid-wrapper .page-grid-right {
+  padding: 20px;
+}
+
+.page-grid-wrapper .page-grid-right h2 {
+  color: #444243;
+  font-weight: normal;
+}
+
+.page-grid-wrapper .page-grid-right p {
+  color: #8B8B8B;
+}
+
+@media screen and (max-width: 1300px) {
+  .page-grid-wrapper {
+    width: 90%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .page-grid-wrapper .page-grid-left {
+    border: none;
+  }
+}
+
+/*FORSIDE*/
+.seperator-image button {
+  height: 40px;
+  width: 40px;
+  border-radius: 25px;
+  border: none;
+  font-size: 15px;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.seperator-image button:hover {
+  cursor: pointer;
+}
+
+.seperator-image .w3-display-left {
+  position: absolute;
+  top: 40%;
+  left: 25px;
+}
+
+.seperator-image .w3-display-right {
+  position: absolute;
+  top: 40%;
+  right: 25px;
+}
+
+#forside-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#forside-wrapper #forside-nyheder #nyheder-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+#forside-wrapper #forside-nyheder #nyheder-grid img {
+  width: 100%;
+}
+
+#forside-wrapper #forside-nyheder #nyheder-grid a {
+  text-decoration: none;
+  color: #8B8B8B;
+}
+
+#forside-wrapper #forside-dashed-seperator {
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#8B8B8B), color-stop(50%, #8B8B8B), color-stop(50%, transparent), to(transparent));
+  background-image: linear-gradient(90deg, #8B8B8B, #8B8B8B 50%, transparent 50%, transparent 100%);
+  background-size: 20px 1px;
+  border: none;
+}
+
+#forside-wrapper #forside-vaerelser #vaerelser-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+#forside-wrapper #forside-vaerelser #vaerelser-grid img {
+  width: 100%;
+}
+
+#forside-wrapper #forside-vaerelser #vaerelser-grid a {
+  text-decoration: none;
+  color: #8B8B8B;
+}
+
+@media screen and (max-width: 1300px) {
+  #forside-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+  #forside-wrapper #forside-nyheder #nyheder-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+  #forside-wrapper #forside-vaerelser #vaerelser-grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/*HOTELLER*/
+#lande-navigation {
+  text-align: center;
+  font-size: 25px;
+  margin: 0;
+  margin-top: -30px;
+  padding-bottom: 5px;
+  -webkit-box-shadow: 0px 15px 10px -15px #111;
+          box-shadow: 0px 15px 10px -15px #111;
+  margin-bottom: 20px;
+}
+
+#lande-navigation ul li {
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+}
+
+#lande-navigation ul #nav-danmark {
+  font-weight: bold;
+}
+
+#hoteller-overskrift {
+  color: #444243;
+  font-weight: normal;
+}
+
+#hoteller-description {
+  color: #8B8B8B;
+  margin-right: 20px;
+}
+
+#hoteller-byer {
+  margin-right: 15px;
+  margin-top: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}
+
+#hoteller-byer .hotel-by-item {
+  cursor: pointer;
+}
+
+#hoteller-byer img {
+  width: 100%;
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#hoteller-byer h2 {
+  color: #444243;
+  font-weight: normal;
+}
+
+#hoteller-byer p {
+  margin: 0;
+  color: #8B8B8B;
+}
+
+#hoteller-vaerelser h2 {
+  font-weight: normal;
+  color: #444243;
+}
+
+.room-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  background-color: white;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.room-item .room-item-left img {
+  padding: 20px;
+  width: 100%;
+}
+
+.room-item .room-item-right {
+  padding: 40px;
+}
+
+.room-item .room-item-right .room-title {
+  color: #444243;
+  font-weight: normal;
+}
+
+.room-item .room-item-right .room-size {
+  color: #8B8B8B;
+}
+
+.room-item .room-item-right .room-description {
+  color: #8B8B8B;
+}
+
+.room-item .room-item-right .room-price {
+  float: right;
+}
+
+.room-udstyr-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+.vaerelse-normal-pris-span, .vaerelse-flex-pris-span {
+  float: right;
+  font-weight: bold;
+  color: black;
+}
+
+#page-grid-right img {
+  width: 100%;
+}
+
+.room-pris-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+}
+
+.room-pris-wrapper .room-wrapper-pris {
+  background-color: #8B8B8B;
+  color: black;
+  margin-right: 20px;
+}
+
+.room-pris-wrapper .room-wrapper-pris h4, .room-pris-wrapper .room-wrapper-pris p, .room-pris-wrapper .room-wrapper-pris h3 {
+  padding: 10px;
+}
+
+.room-pris-wrapper .room-wrapper-pris button {
+  cursor: pointer;
+  float: right;
+  background-color: red;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  height: 50px;
+  width: 80px;
+  margin: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .room-item {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .room-item .room-item-left img {
+    padding: 0;
+  }
+  #hoteller-vaerelser img {
+    width: 100%;
+  }
+  .room-udstyr-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+/*VÆRELSER*/
+#vaerelser-wrapper {
+  margin-top: 50px;
+}
+
+#vaerelser-right-page-grid img {
+  width: 100px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#vaerelser-right-page-grid p {
+  position: relative;
+  bottom: 70px;
+  left: 110px;
+  color: blue;
+}
+
+.room-images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+
+.room-images img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media screen and (max-width: 1300px) {
+  .room-images {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+/*RESERVER*/
+.reserver-obligatory {
+  color: red;
+}
+
+#reserver-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 25px;
+}
+
+#reserver-form form label {
+  color: #444243;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#reserver-form form select, #reserver-form form input[type=text], #reserver-form form input[type=date], #reserver-form form input[type=password], #reserver-form form textarea {
+  width: 100%;
+  margin-top: 5px;
+  height: 35px;
+  text-indent: 5px;
+  color: #444243;
+  border: 1px solid #8B8B8B;
+  border-radius: 3px;
+}
+
+#reserver-form form select::-webkit-input-placeholder, #reserver-form form input[type=text]::-webkit-input-placeholder, #reserver-form form input[type=date]::-webkit-input-placeholder, #reserver-form form input[type=password]::-webkit-input-placeholder, #reserver-form form textarea::-webkit-input-placeholder {
+  color: #8B8B8B;
+}
+
+#reserver-form form select:-ms-input-placeholder, #reserver-form form input[type=text]:-ms-input-placeholder, #reserver-form form input[type=date]:-ms-input-placeholder, #reserver-form form input[type=password]:-ms-input-placeholder, #reserver-form form textarea:-ms-input-placeholder {
+  color: #8B8B8B;
+}
+
+#reserver-form form select::-ms-input-placeholder, #reserver-form form input[type=text]::-ms-input-placeholder, #reserver-form form input[type=date]::-ms-input-placeholder, #reserver-form form input[type=password]::-ms-input-placeholder, #reserver-form form textarea::-ms-input-placeholder {
+  color: #8B8B8B;
+}
+
+#reserver-form form select::placeholder, #reserver-form form input[type=text]::placeholder, #reserver-form form input[type=date]::placeholder, #reserver-form form input[type=password]::placeholder, #reserver-form form textarea::placeholder {
+  color: #8B8B8B;
+}
+
+#reserver-form form textarea {
+  height: 200px;
+}
+
+#reserver-form form input[type=checkbox] {
+  height: 20px;
+  width: 20px;
+}
+
+#reservation-accepter-label {
+  position: relative;
+  bottom: 5px;
+}
+
+#reservation-knapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 5px;
+}
+
+#reservation-knapper button, #reservation-knapper input {
+  width: 100%;
+  background-color: #F30100;
+  margin-top: 30px;
+  color: white;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#reserver-form-room-type {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  grid-gap: 5px;
+}
+
+#prisklasse-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.half-half-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+  #reserver-form {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+/* LOGIN */
+#login-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#login-wrapper h2 {
+  color: #444243;
+  font-weight: normal;
+}
+
+#login-wrapper #login-breadcrump a {
+  text-decoration: none;
+  color: #444243;
+  font-weight: 400;
+  margin: 0;
+}
+
+#login-wrapper #login-overskrift {
+  font-size: 35px;
+  font-weight: 400;
+  color: #444243;
+  margin: 0;
+  margin-top: 10px;
+}
+
+#login-wrapper #login-underskrift {
+  color: #8B8B8B;
+  margin: 0;
+  margin-top: 10px;
+}
+
+#login-wrapper #login-seperator {
+  margin-top: 20px;
+  height: 1px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#8B8B8B), color-stop(50%, #8B8B8B), color-stop(50%, transparent), to(transparent));
+  background-image: linear-gradient(90deg, #8B8B8B, #8B8B8B 50%, transparent 50%, transparent 100%);
+  background-size: 20px 1px;
+  border: none;
+}
+
+#login-wrapper #login-form form {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+#login-wrapper #login-form form label {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#login-wrapper #login-form form label .login-obligatory {
+  color: #F30100;
+}
+
+#login-wrapper #login-form form input[type="text"], #login-wrapper #login-form form input[type="password"] {
+  display: block;
+  margin-top: 5px;
+  width: 50%;
+  height: 35px;
+  text-indent: 5px;
+  color: #444243;
+  border: 1px solid #8B8B8B;
+  border-radius: 3px;
+}
+
+#login-wrapper #login-form form input[type="text"]::-webkit-input-placeholder, #login-wrapper #login-form form input[type="password"]::-webkit-input-placeholder {
+  color: #8B8B8B;
+}
+
+#login-wrapper #login-form form input[type="text"]:-ms-input-placeholder, #login-wrapper #login-form form input[type="password"]:-ms-input-placeholder {
+  color: #8B8B8B;
+}
+
+#login-wrapper #login-form form input[type="text"]::-ms-input-placeholder, #login-wrapper #login-form form input[type="password"]::-ms-input-placeholder {
+  color: #8B8B8B;
+}
+
+#login-wrapper #login-form form input[type="text"]::placeholder, #login-wrapper #login-form form input[type="password"]::placeholder {
+  color: #8B8B8B;
+}
+
+#login-wrapper #login-form form input[type="submit"], #login-wrapper #login-form form button {
+  background-color: #F30100;
+  margin-top: 30px;
+  color: white;
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+  #login-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+  #login-wrapper #login-form form input[type="text"], #login-wrapper #login-form form input[type="password"] {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/*NYHEDER*/
+#nyheder-aktuel-nyhed {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#nyheder-aktuel-nyhed h2 {
+  color: #444243;
+  font-weight: normal;
+}
+
+#nyheder-aktuel-nyhed p {
+  color: #8B8B8B;
+}
+
+@media screen and (max-width: 1300px) {
+  #nyheder-aktuel-nyhed {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #nyheder-aktuel-nyhed img {
+    width: 100%;
+  }
+}
+
+/*PROFIL*/
+#profil-log-ud {
+  color: red;
+  cursor: pointer;
+}
+
+#profil-reservationer .profil-reservation-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: white;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 5px;
+  justify-items: center;
+  padding: 15px;
+  margin: 15px;
+}
+
+#profil-reservationer .profil-reservation-item p {
+  color: black;
+  margin: 0;
+}
+
+#profil-reservationer .profil-reservation-item .reservation-header {
+  color: #8B8B8B;
+}
+
+#profil-reservationer .profil-reservation-item .reservation-delete {
+  color: red;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  #profil-reservationer .profil-reservation-item {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    justify-items: left;
+  }
+  #profil-reservationer .profil-reservation-item .reservation-header {
+    padding-top: 5px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

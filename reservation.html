@@ -1,0 +1,205 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel Overlook :: Reservation</title>
+        <script src="https://kit.fontawesome.com/727fcb130f.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <link rel="stylesheet" href="css/footer.css">
+    </head>
+<body>
+
+
+<div class="navigation-faker"></div>
+<nav>
+    <div class="navigation">
+        <div class="navigation-image">
+            <img src="images/hotel-overlook-logo.png" alt="Hotel Overlook Logo">
+        </div>
+        <div class="navigation-links">
+            <a href="index.html">Forside</a>
+            <a href="hoteller.html">Hoteller og destinationer</a>
+            <a href="vaerelser.html">Værelser</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="login.html" class="nav-login">Login</a>
+        </div>
+    </div>
+</nav>
+
+<div class="seperator-image">
+    <img src="images/overlook-holmenkollen.jpg" alt="Overlook Hotel in Holmenkollen, Island">
+</div>
+
+<section class="page-grid-wrapper" id="vaerelser-wrapper">
+    <div class="page-grid-left">
+        <div class="page-grid-breadcrump" id="vaerelser-breadcrump">
+            <a href="index.html">Hotel Overlook ></a>
+            <a href="reservation.html"><span id="vaerelse-last-breadcrump">Reservation > Reserver dit foretrukne værelse </span></a>
+        </div>
+        <div>
+            <h2>Reserver dit foretrukne værelse</h2>
+            <p>Her kan du vælge destination, hotel og værelsestype og gennemføre din Overlook booking.</p>
+        </div>
+        <div class="dashed-seperator"></div>
+        <div id="reserver-form">
+            <form onsubmit="validerReservation()" id="reservation-form">
+                <label id="destination-hotel-label" for="destination-hotel">Destination/Hotel: <span class="reserver-obligatory">*</span></label><br>
+                <select id="destination-hotel-select" name="destination-hotel">
+                    <option value="11">Overlook Copenhagen, København, Danmark</option>
+                    <option value="10">Overlook Webers, København, Danmark</option>
+                    <option value="1">Overlook Europa, Göteborg, Sverige</option>
+                    <option value="3">Overlook Crown, Göteborg, Sverige</option>
+                    <option value="4">Overlook Grand Central, Stockholm, Norge</option>
+                    <option value="5">Haymarket By Overlook, Stockholm, Norge</option>
+                    <option value="6">Overlook Portalen, Jönköping, Sverige</option>
+                    <option value="7">Overlook Grand Marina, Helsinki, Finland</option>
+                    <option value="8">Overlook Seurahuone Helsinki, Helsinki, Finland</option>
+                    <option value="9">Overlook Rauma, Rauma, Finland</option>
+                    <option value="12">Overlook Aalborg City, Aalborg, Danmark</option>
+                    <option value="13">Overlook Aalborg Øst, Aalborg, Danmark</option>
+                    <option value="14">Overlook Silkeborg, Silkeborg, Danmark</option>
+                    <option value="15">Overlook The Mayor, Århus, Danmark</option>
+                    <option value="16">Overlook Aarhus City, Århus, Danmark</option>
+                    <option value="17">Overlook Hafjell, Lillehammer, Norge</option>
+                    <option value="18">Overlook Victoria, Lillehammer, Norge</option>
+                    <option value="19">Grand Hotel Oslo By Overlook, Oslo, Norge</option>
+                    <option value="20">Overlook Holmenkollen Park, Oslo, Norge</option>
+                    <option value="21">Overlook Ishavshotel, Tromsø, Norge</option>
+                    <option value="22">Overlook Grand Tromsø, Tromsø, Norge</option>
+                    <option value="23">Overlook Berlin Potsdamer Platz, Berlin, Tyskland</option>
+                    <option value="24">Overlook Berlin Kurfurstendamm, Berlin, Tyskland</option>
+                    <option value="25">Overlook Hamburg Emporio, Hamborg, Tyskland</option>
+                    <option value="26">Overlook Frankfurt Museumsufer, Frankfurt, Tyskland</option>
+                    <option value="27">Overlook Gdansk, Gdansk, Polen</option>
+                    <option value="28">Overlook Wroclaw, Wroclaw, Polen</option>
+                    <option value="30">Overlook Grand Hotel Reykjavik, Reykjavik, Island</option>
+                    <option value="31">Overlook Blue Lagoon, Keflavik, Island</option>
+                </select>
+                <br><br>
+                <div id="reserver-form-room-type">
+                    <div id="reserver-form-room-type-left">
+                        <label id="room-type-label" for="room-type">Værelsestype:  <span class="reserver-obligatory">*</span></label><br>
+                        <select id="room-type" name="room-type">
+                            <option value="6">Single Standard</option>
+                            <option value="7">Standard</option>
+                            <option value="1">Economy</option>
+                            <option value="2">Superior</option>
+                            <option value="3">Superior plus</option>
+                            <option value="4">Junior suite</option>
+                            <option value="5">Presidental suite</option>
+                        </select>
+                    </div>
+                    <div id="reserver-form-num-persons-right">
+                        <label for="room-num-persons">Antal personer <span class="reserver-obligatory">*</span></label><br>
+                        <select id="room-num-persons" name="room-num-persons">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <label  id="room-pris-klasse-label" for="room-pris-klasse">Prisklasse: <span class="reserver-obligatory">*</span></label>
+                <div id="prisklasse-grid">
+                    <div id="prisklasse-left-grid">
+                        <input type="radio" id="normal-pris" name="prisklasse" value="false">
+                        <label for="normal-pris">Normal pris</label>
+                    </div>
+                    <div id="prisklasse-right-grid">
+                        <input type="radio" id="flex-pris" name="prisklasse" value="true">
+                        <label for="flex-pris">Flex pris</label>
+                    </div>
+                </div>
+                <br>
+                <div class="half-half-grid">
+                    <div class="half-half-left">
+                        <label for="check-in-dato" id="check-in-dato-label">Check-in dato: <span class="reserver-obligatory">*</span></label><br>
+                        <input type="date" id="check-in-dato" name="check-in-dato">
+                    </div>
+                    <div class="half-half-right">
+                        <label for="check-out-dato" id="check-out-dato-label">Check-out dato: <span class="reserver-obligatory">*</span></label><br>
+                        <input type="date" id="check-out-dato" name="check-out-dato">
+                    </div>
+                </div>
+                <br>
+                <div class="half-half-grid">
+                    <div class="half-half-left">
+                        <label for="reservation-fornavn" id="reservation-fornavn-label">Fornavn: <span class="reserver-obligatory">*</span></label>
+                        <input type="text" id="reservation-fornavn" name="reservation-fornavn" placeholder="Indtast dit fornavn"/>
+                    </div>
+                    <div class="half-half-right">
+                        <label for="reservation-efternavn" id="reservation-efternavn-label">Efternavn: <span class="reserver-obligatory">*</span></label>
+                        <input type="text" id="reservation-efternavn" name="reservation-efternavn" placeholder="Indtast dit efternavn"/>
+                    </div>
+                </div>
+                <br>
+                <label for="reservation-email" id="reservation-email-label">Email:  <span class="reserver-obligatory">*</span></label>
+                <input type="text" id="reservation-email" name="reservation-email" placeholder="Indtast din email"/>
+                <br><br>
+                <div class="half-half-grid">
+                    <div class="half-half-left">
+                        <label for="reservation-adgangskode" id="reservation-adgangskode-label">Adgangskode: <span class="reserver-obligatory">*</span></label>
+                        <input type="password" id="reservation-adgangskode" name="reservation-adgangskode" placeholder="Indtast din adgangskode"/>
+                    </div>
+                    <div class="half-half-right">
+                        <label for="reservation-adgangskode-gentag" id="reservation-adgangskode-gentag-label">Gentag adgangskode: <span class="reserver-obligatory">*</span></label>
+                        <input type="password" id="reservation-adgangskode-gentag" name="reservation-adgangskode-gentag" placeholder="Gentag din adgangskode"/>
+                    </div>
+                </div>
+                <br>
+                <label for="reservation-telefon" id="reservation-telefon-label">Telefon:  <span class="reserver-obligatory">*</span></label><br>
+                <input type="text" id="reservation-telefon" name="reservation-telefon" placeholder="Indtast dit telefonnummer"/>
+                <br><br>
+                <label for="reservation-kommentar">Eventuelle anmodninger eller kommentarer:</label>
+                <textarea id="reservation-kommentar" name="reservation-kommentar"></textarea>
+                <br><br>
+                <input type="checkbox" id="reservation-accepter" name="reservation-accepter">
+                <label for="reservation-accepter" id="reservation-accepter-label"> Jeg accepterer hermed Overlook betingelser (sæt flueben).</label><br>
+                <div id="reservation-knapper">
+                    <div id="reservation-knapper-left">
+                        <input type="submit" value="Send reservation">
+                    </div>
+                    <div id="reservation-knapper-right">
+                        <button onclick="annulerReservation()">Annuler</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="page-grid-right">
+        <h2>Betingelser</h2>
+        <p><i class="fas fa-check"></i> Reduceret pris - spar op til 25%</p>
+        <p><i class="fas fa-check"></i> Kan kun bookes online via Overlook website og app.</p>
+        <p><i class="fas fa-check"></i> Bestil helt op til og med ankomstdagen.</p>
+        <p><i class="fas fa-check"></i> Bookinger tilbagebetales ikke og kan ikke ændres eller annuleres.</p>
+        <p><i class="fas fa-check"></i> Beløbet debiteres kreditkort på reservationtidspunktet.</p>
+        <p><i class="fas fa-check"></i> Morgenmad er inkluderet.</p>
+    </div>
+</section>
+
+<footer>
+    <div class>
+        <p>&copy; 2019 Hotel Overlook. Alle rettigheder er forbeholdt.</p>
+    </div>
+    <div class>
+        <p>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://twitter.com/?lang=da"><i class="fab fa-twitter-square"></i></a>
+        </p>
+    </div>
+    <div class>
+        <p>
+            <a href="hoteller.html">Hoteller og destinationer</a>
+            <a href="vaerelser.html">Værelser</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="index.html">Om Overlook</a>
+        </p>
+    </div>
+</footer>
+
+<script src="js/profiler.js"></script>
+<script src="js/reservation.js"></script>
+</body>
+</html>

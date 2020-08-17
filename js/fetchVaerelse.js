@@ -8,7 +8,6 @@ function fetchRoom(request) {
 }
 
 function writeRoom(data) {
-    console.log(data);
     vaerelse_inner_wrapper.innerHTML="";
     vaerelse_last_breadcrump.innerHTML = "Se vores udvalg af værelser > " + data.item.title;
 
@@ -39,7 +38,7 @@ function writeRoom(data) {
     vaerelse_inner_wrapper.appendChild(room_num_persons);
 
     let room_bed_type = document.createElement('p');
-    room_bed_type.innerHTML = '<i class="fas fa-bed"></i> Sengetyper: FU API';
+    room_bed_type.innerHTML = '<i class="fas fa-bed"></i> Sengetyper: <span id="sengetype">Apperently ingen seng.. Tag et liggeunderlag med</span>';
     vaerelse_inner_wrapper.appendChild(room_bed_type);
 
     let room_udstyr_overskrift = document.createElement('h2');
@@ -50,9 +49,13 @@ function writeRoom(data) {
     room_udstyr_wrapper.setAttribute('class', 'room-udstyr-wrapper');
     
     for (i=0; i<data.item.facilities.length; i++) {
-        let room_udstyr_item = document.createElement('p');
-        room_udstyr_item.innerHTML = '<i class="fas fa-check"></i> ' + data.item.facilities[i].title;
-        room_udstyr_wrapper.appendChild(room_udstyr_item);
+        if (data.item.facilities[i].category == "Senge") {
+            document.getElementById('sengetype').innerHTML = data.item.facilities[i].title;
+        }else {
+            let room_udstyr_item = document.createElement('p');
+            room_udstyr_item.innerHTML = '<i class="fas fa-check"></i> ' + data.item.facilities[i].title;
+            room_udstyr_wrapper.appendChild(room_udstyr_item);
+        }
     }
     vaerelse_inner_wrapper.appendChild(room_udstyr_wrapper);
 
